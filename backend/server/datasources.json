@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongo": {
+    "host": "",
+    "port": 0,
+    "url": "mongodb://isserova:Kate2002!@ds255282.mlab.com:55282/final-example",
+    "database": "final-example",
+    "password": "Kate2002!",
+    "name": "mongo",
+    "user": "isserova",
+    "connector": "mongodb"
+  }
+}
