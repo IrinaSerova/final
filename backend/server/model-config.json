@@ -38,13 +38,5 @@
   "appUser": {
     "dataSource": "mongo",
     "public": true
-  },
-  "appUserTwo": {
-    "dataSource": "mongo",
-    "public": true
-  },
-  "appUser3": {
-    "dataSource": "mongo",
-    "public": true
   }
 }
