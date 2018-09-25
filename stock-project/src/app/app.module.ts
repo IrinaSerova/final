@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ChartsModule } from 'ng2-charts';
 import { ClarityModule , ClrFormsNextModule } from '@clr/angular';
@@ -26,7 +27,7 @@ import { RegisterComponent } from './register/register.component';
 
 
 
-// import { AppUserService} from './app-user.service';
+import { AppUserService} from './app-user.service';
 
 @NgModule({
   declarations: [
@@ -50,9 +51,11 @@ import { RegisterComponent } from './register/register.component';
     routes,
     HttpClientModule,
     ChartsModule,
-    ClrFormsNextModule 
+    ClrFormsNextModule ,
+    FormsModule,
+        ReactiveFormsModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, AppUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

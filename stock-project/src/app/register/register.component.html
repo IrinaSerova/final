@@ -1,5 +1,5 @@
 <div class="login-wrapper">
-    <form class="login">
+    <form class="login" [formGroup]="userRegistration" novalidate (ngSubmit) = "onRegister()">
         <label class="title">
             <h3 class="welcome">Welcome to</h3>
             JustStock
@@ -12,11 +12,16 @@
                     <option>Administrator</option>
                 </select>
             </div>
-            <input class="username" type="text" id="login_username" placeholder="Username">
-             <input class="firstName" type="text" id="firstName" placeholder="First Name">
-             <input class="lastName" type="text" id="lastName" placeholder="Last Name">
-             <input class="lastName" type="text" id="lastName" placeholder="Last Name">
-            <input class="email" type="text" id="email" placeholder="email">
+            <!--<input class="username" type="text" id="login_username" placeholder="Username" [(ngModel)]="user.name" >-->
+            <!-- <input class="firstName" type="text" id="firstName" placeholder="First Name" [(ngModel)]="user.firstName" >-->
+            <!-- <input class="lastName" type="text" id="lastName" placeholder="Last Name"[(ngModel)]="user.lastName" >-->
+            <!-- <input class="password" type="text" id="password" placeholder="Password" [(ngModel)]="user.password">-->
+            <!--<input class="email" type="text" id="email" placeholder="email" [(ngModel)]="user.email">-->
+             <input class="username" type="text" id="login_username" placeholder="Username" clrInput formControlName="username">
+             <input class="firstName" type="text" id="firstName" placeholder="First Name" clrInput formControlName="firstName" >
+             <input class="lastName" type="text" id="lastName" placeholder="Last Name"clrInput formControlName="lastName" >
+             <input class="password" type="text" id="password" placeholder="Password" clrInput formControlName="password">
+            <input class="email" type="text" id="email" placeholder="email" clrInput formControlName="email" >
             <!--[(ngModel)]="user.email"-->
               
             <div class="checkbox">
@@ -28,7 +33,7 @@
             <div class="error active">
                 Invalid user name or password
             </div>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button (click)="onSubmit()" type="submit" class="btn btn-primary">Register</button>
             <a [routerLink]="['../login']" class="signup">Login for JustStock</a>
             
         </div>
