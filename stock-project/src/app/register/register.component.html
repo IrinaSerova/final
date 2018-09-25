@@ -1,0 +1,62 @@
+<div class="login-wrapper">
+    <form class="login">
+        <label class="title">
+            <h3 class="welcome">Welcome to</h3>
+            JustStock
+            <h5 class="hint">Use your JustStock ID to sign in or create one now</h5>
+        </label>
+        <div class="login-group">
+            <div class="auth-source select">
+                <select id="login-auth-source-1">
+                    <option>Local Users</option>
+                    <option>Administrator</option>
+                </select>
+            </div>
+            <input class="username" type="text" id="login_username" placeholder="Username">
+             <input class="firstName" type="text" id="firstName" placeholder="First Name">
+             <input class="lastName" type="text" id="lastName" placeholder="Last Name">
+             <input class="lastName" type="text" id="lastName" placeholder="Last Name">
+            <input class="email" type="text" id="email" placeholder="email">
+            <!--[(ngModel)]="user.email"-->
+              
+            <div class="checkbox">
+                <input type="checkbox" id="rememberme">
+                <label for="rememberme">
+                    Remember me
+                </label>
+            </div>
+            <div class="error active">
+                Invalid user name or password
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+            <a [routerLink]="['../login']" class="signup">Login for JustStock</a>
+            
+        </div>
+        
+    </form>
+</div>
+
+<!--<form>-->
+
+<!--  <input clrInput placeholder="first name" name="input" [(ngModel)]="user.firstName" />-->
+<!--  <input clrInput placeholder="last name" name="input" [(ngModel)]="user.lastName" />-->
+<!--  <input clrInput placeholder="email" name="input" [(ngModel)]="user.email" />-->
+<!--  <input clrInput placeholder="password" name="input" [(ngModel)]="user.password" />-->
+
+<!--</form>-->
+<!--<button (click)="onRegister()">Registration</button>-->
+<!--<form class="clr-form clr-form-compact">-->
+<!--    <div class="clr-form-control clr-row">-->
+<!--        <label for="example" class="clr-control-label clr-col-xs-12 clr-col-md-2">Label</label>-->
+<!--        <div class="clr-control-container clr-col-xs-12 clr-col-md-10">-->
+<!--            <div class="clr-input-wrapper">-->
+<!--                <input type="text" id="example" placeholder="Example Input" class="clr-input">-->
+<!--                <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>-->
+<!--            </div>-->
+<!--            <span class="clr-subtext">Helper Text</span>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</form>-->
+
+
+
